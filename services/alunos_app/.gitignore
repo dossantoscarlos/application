@@ -1,7 +1,0 @@
-./**/*.pyc
-Pipfile
-Pipfile.lock
-.pytest_cache
-./src/**/__pycache__
-./tests/**/__pycache__
-*.db
