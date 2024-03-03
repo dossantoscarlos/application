@@ -31,6 +31,8 @@ class Aluno extends Model
         'turma_codigo'
     ];
 
+    protected $with =['matricula'];
+    
     public function cadastraAluno(array $data) : Aluno
     {
         $aluno = self::create([

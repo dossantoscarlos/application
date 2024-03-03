@@ -23,7 +23,7 @@ class AlunoController extends Controller
 
     public function index(): JsonResponse
     {
-        return response()->json(Aluno::with('matricula')->paginate(20,['*'],'page'));
+        return response()->json($this->aluno->paginate(20,['*'],'page'));
     }
 
     public function store(Request $request) : Response

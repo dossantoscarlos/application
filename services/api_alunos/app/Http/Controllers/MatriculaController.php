@@ -5,56 +5,31 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreMatriculaRequest;
 use App\Http\Requests\UpdateMatriculaRequest;
 use App\Models\Matricula;
+use Illuminate\Http\JsonResponse;
 
 class MatriculaController extends Controller
 {
+
+
+    public function __construct(private Matricula $matricula) {  }
+
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index() : JsonResponse
     {
-        //
+        return response()->json($this->matricula->paginate(perPage:20, columns:['*'], pageName:'page'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreMatriculaRequest $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
      */
-    public function show(Matricula $matricula)
+    public function show(Matricula $matricula) : JsonResponse
     {
-        //
+        return response()->json($matricula);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Matricula $matricula)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateMatriculaRequest $request, Matricula $matricula)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.

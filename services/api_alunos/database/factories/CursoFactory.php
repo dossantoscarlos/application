@@ -17,7 +17,10 @@ class CursoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'codigo_curso' => fake()->unique()->sha256(),
+            'descricao' => fake()->text(),
+            'duracao'=> random_int(1,10)
         ];
+    
     }
 }

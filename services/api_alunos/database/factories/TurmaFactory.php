@@ -17,7 +17,10 @@ class TurmaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'numero' => fake()->numberBetween(1000 , 9000),
+            'quantidade_atual' => 30,
+            'quantidade_maxima' => 40,
+            'curso_id' => ''
         ];
     }
 }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AlunoController;
 use App\Http\Controllers\DisciplinaController;
 use App\Http\Controllers\DocenteController;
+use App\Http\Controllers\MatriculaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,4 +26,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('aluno',AlunoController::class);
 Route::apiResource('docente', DocenteController::class);
 Route::apiResource('disciplina', DisciplinaController::class);
-
+Route::controller(MatriculaController::class)->group(function () {
+    Route::get('/matricula/{id}', 'show');
+    Route::get('/matriculas', 'index');
+});

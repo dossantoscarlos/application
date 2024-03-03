@@ -24,14 +24,17 @@ class Matricula extends Model
 
     protected $fillable = [
         'codigo',
+        'turma_id',
         'ativo'
     ];
 
     public function generetedMatricula(Aluno $aluno, ?string $codigoTurma) : Matricula 
     {
+        $turma = Turma::whereNumero($codigoTurma)->first();
+
         $matricula = $aluno->matricula()->create([
             'codigo' => Hash::make(now()),
-            'turma_id' => Turma::whereNumero($codigoTurma)->get(), 
+            'turma_id' => $turma->id, 
             'ativo'=> true
         ]);
         
