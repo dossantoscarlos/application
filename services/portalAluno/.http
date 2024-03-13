@@ -1,0 +1,42 @@
+GET http://localhost:8000/api/aluno HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+########
+POST http://localhost:8000/api/aluno HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "nome": "carlos",
+    "sobrenome": "eduardo",
+    "dataNascimento" : "1991-04-10",
+    "sexo" : "m",
+    "turma_codigo":"8379"
+}
+
+####
+GET http://localhost:8000/api/aluno/9b789dab-59c7-4126-a7ce-4a5beb1efbe0 HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+####
+POST http://localhost:8000/api/docente HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "nome":"Carlos",
+    "sobrenome":"Dos santos"
+}
+
+
+###
+GET http://localhost:8000/api/matricula/1 HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+#####
+GET http://localhost:8000/api/matriculas HTTP/1.1
+Accept:application/json
+Content-Type: application/json
