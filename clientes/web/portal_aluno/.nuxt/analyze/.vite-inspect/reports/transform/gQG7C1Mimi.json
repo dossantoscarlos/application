@@ -1,0 +1,17 @@
+{
+  "resolvedId": "virtual:nuxt:/home/nakiban/application/clientes/web/portal_aluno/.nuxt/css.mjs",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "",
+      "start": 1709508478445,
+      "end": 1709508478445
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1709508478445,
+      "end": 1709508478445,
+      "order": "normal"
+    }
+  ]
+}

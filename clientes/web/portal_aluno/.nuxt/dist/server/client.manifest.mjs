@@ -1,0 +1,1 @@
+export { default } from "file:///home/nakiban/application/clientes/web/portal_aluno/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
